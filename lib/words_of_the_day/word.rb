@@ -1,3 +1,5 @@
+require 'nokogiri'
+require 'open-uri'
 class Word
   attr_accessor :name, :definition, :part_of_speech
 

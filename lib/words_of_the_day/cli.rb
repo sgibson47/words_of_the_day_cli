@@ -1,13 +1,15 @@
 require_relative './word.rb'
+require_relative './scraper.rb'
 class CLI
   def call
+    scraper = Scraper.new
+    scraper.scrape_webster
     list_words
     menu
     goodbye
   end
 
   def list_words
-    #should eventually scrape & create word objects
     puts "Today's Words"
     Word.all.each_with_index {|word, i|
       puts "#{i +1}. #{word.name}"}
