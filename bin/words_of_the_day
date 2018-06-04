@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/words_of_the_day/cli.rb'
+
+CLI.new.call
