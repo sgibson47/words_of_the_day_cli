@@ -21,14 +21,11 @@ class CLI
     input = nil
 
     while input != "exit"
-      case input = gets.strip
-      when "1"
-        puts "info on word 1"
-      when "2"
-        puts "info on word 2"
-      when "3"
-        puts "info on word 3"
-      when "exit"
+      input = gets.strip
+      if input.to_i > 0 && input.to_i <= Word.all.length
+        word = Word.all[input.to_i - 1]
+        word.display_details
+      elsif input == "exit"
         break
       else
         puts "Please enter a number from the list or exit."

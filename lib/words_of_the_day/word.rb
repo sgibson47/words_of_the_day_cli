@@ -7,6 +7,12 @@ class Word
     @@all
   end
 
+  def display_details
+    puts "#{self.name}".upcase
+    puts "Part of speech: #{self.part_of_speech}"
+    puts "Definition: #{self.definition}"
+  end
+
   word_1 = Word.new
   word_1.name = "proficient"
   word_1.definition = "well advanced in an art, occupation, or branch of knowledge"
